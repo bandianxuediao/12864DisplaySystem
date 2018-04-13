@@ -1,0 +1,19 @@
+--cpu Cortex-M3
+".\output\main.o"
+".\output\stm32f10x_it.o"
+".\output\delay.o"
+".\output\sys.o"
+".\output\st7920.o"
+".\output\display.o"
+".\output\oled.o"
+".\output\misc.o"
+".\output\stm32f10x_gpio.o"
+".\output\stm32f10x_tim.o"
+".\output\stm32f10x_rcc.o"
+".\output\core_cm3.o"
+".\output\system_stm32f10x.o"
+".\output\startup_stm32f10x_md.o"
+--strict --scatter ".\OUTPUT\TimeTest.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\LISTING\TimeTest.map" -o .\OUTPUT\TimeTest.axf

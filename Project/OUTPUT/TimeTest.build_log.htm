@@ -1,0 +1,95 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: liyadong Microsoft, Microsoft, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  D:\LYD\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DARMSTM.DLL V1.65.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TARMSTM.DLL V1.64.0.0
+ 
+<h2>Project:</h2>
+D:\LYD\WorkSpace\GitHub\12864DisplaySystem\Project\TimeTest.uvprojx
+Project File Date:  04/13/2018
+
+<h2>Output:</h2>
+Build target 'Timeer Test'
+compiling main.c...
+..\User\main.c(9): warning:  #177-D: variable "x" was declared but never referenced
+            unsigned char x, y;
+..\User\main.c(9): warning:  #177-D: variable "y" was declared but never referenced
+            unsigned char x, y;
+..\User\main.c(10): warning:  #177-D: variable "i" was declared but never referenced
+  int i=0;
+..\User\main.c: 3 warnings, 0 errors
+compiling stm32f10x_it.c...
+compiling delay.c...
+compiling sys.c...
+compiling ST7920.c...
+compiling display.c...
+..\HardWare\OLED\display.c(41): warning:  #223-D: function "strlen" declared implicitly
+                        temp = (unsigned char)strlen((const char*)str)*LWIDTH;  //计算字符所占据的OLED屏的像素
+..\HardWare\OLED\display.c(289): warning:  #223-D: function "memset" declared implicitly
+        memset((u8*)&input_data, 0, sizeof(INPUT_DATA));
+..\HardWare\OLED\display.c(394): warning:  #223-D: function "memset" declared implicitly
+                memset(temp, '*', input_data.length[input_data.area_current]);
+..\HardWare\OLED\display.c(452): warning:  #223-D: function "sscanf" declared implicitly
+                sscanf((const char*)&input_data.buffer[input_data.area_current], "%ld", &temp);
+..\HardWare\OLED\display.c(498): warning:  #223-D: function "strlen" declared implicitly
+        index = strlen((char*)&input_data.buffer[input_data.area_current]);//获取当前已输入的字符串长度
+..\HardWare\OLED\display.c(506): warning:  #223-D: function "memset" declared implicitly
+                memset(temp, ' ', input_data.length[input_data.area_current]);//把最多可允许输入字符全替换为空格
+..\HardWare\OLED\display.c(557): warning:  #223-D: function "strlen" declared implicitly
+        slen = (unsigned char)strlen((const char *)label);      //字符的长度
+..\HardWare\OLED\display.c(597): warning:  #223-D: function "memcpy" declared implicitly
+        memcpy(oled_disp_buf, oled_disp_buf_pre, oled_disp_length);    //恢复上一次保存的显示缓存
+..\HardWare\OLED\display.c(619): warning:  #223-D: function "memcpy" declared implicitly
+        memcpy(oled_disp_buf_pre, oled_disp_buf, oled_disp_length);//备份OLED显存
+..\HardWare\OLED\display.c: 9 warnings, 0 errors
+compiling oled.c...
+..\HardWare\OLED\oled.c(821): warning:  #223-D: function "memset" declared implicitly
+        memset(oled_disp_buf,0,sizeof(oled_disp_buf));
+..\HardWare\OLED\oled.c(847): warning:  #177-D: variable "j" was declared but never referenced
+        unsigned char oled_line,j=0,oled_h_dot;
+..\HardWare\OLED\oled.c(896): warning:  #177-D: variable "oled_line" was declared but never referenced
+        unsigned char oled_line,j=0,oled_h_dot;
+..\HardWare\OLED\oled.c(896): warning:  #177-D: variable "j" was declared but never referenced
+        unsigned char oled_line,j=0,oled_h_dot;
+..\HardWare\OLED\oled.c(896): warning:  #177-D: variable "oled_h_dot" was declared but never referenced
+        unsigned char oled_line,j=0,oled_h_dot;
+..\HardWare\OLED\oled.c(897): warning:  #177-D: variable "dot_line" was declared but never referenced
+        unsigned char s,h,dot_line,temp=0;
+..\HardWare\OLED\oled.c(898): warning:  #177-D: variable "dot_index" was declared but never referenced
+        unsigned long  dot_index=0;
+..\HardWare\OLED\oled.c: 7 warnings, 0 errors
+compiling misc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_rcc.c...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=15252 RO-data=2524 RW-data=436 ZI-data=6340  
+FromELF: creating hex file...
+".\OUTPUT\TimeTest.axf" - 0 Error(s), 19 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  D:\LYD\WorkSpace\GitHub\12864DisplaySystem\Project\RTE
+  D:\LYD\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>
